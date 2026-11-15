@@ -19,7 +19,7 @@ h1,h2,h3{font-family:Fraunces,serif;font-weight:900;line-height:1.02}
 .btn-wa{background:var(--wa);color:#fff}
 .btn-ghost{border:1px solid #45454f;color:var(--cream);background:rgba(10,10,13,.35);backdrop-filter:blur(6px)}
 /* header */
-header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(9,9,12,.55);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(9,9,12,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
 .nav{display:flex;justify-content:space-between;align-items:center;padding:15px 0}
 .logo{font-family:Fraunces,serif;font-size:23px;font-weight:900;letter-spacing:.03em}
 .logo span{color:var(--gold)}
@@ -37,7 +37,7 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(9,9,12,.55);ba
 .hero-note{margin-top:26px;font-size:13px;color:var(--mut);letter-spacing:.04em}
 .hero-note b{color:var(--gold2);font-weight:600}
 /* sections */
-section{padding:84px 0}
+section{padding:58px 0}
 .sec-head{max-width:640px}
 .sec-head h2{font-size:clamp(32px,5vw,46px);margin:12px 0 10px}
 .sec-head p{color:var(--mut)}
@@ -79,6 +79,9 @@ footer{text-align:center;color:#77726a;font-size:13px;padding:34px 22px 110px}
 .reveal.in{opacity:1;transform:none}
 .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
 @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}.hero-bg{animation:none}html{scroll-behavior:auto}}
+
+/* v3 fix: fixed call bar must never cover page content */
+body{padding-bottom:108px}
 </style></head><body>
 
 <header><div class="wrap nav"><div class="logo">KING <span>WOLF</span> CAFE</div><a class="btn btn-gold" href="tel:+919871824185">Call Cafe</a></div></header>
@@ -98,7 +101,7 @@ footer{text-align:center;color:#77726a;font-size:13px;padding:34px 22px 110px}
 <div class="grid">
 <article class="card reveal"><div class="ph"><img src="coffee.jpg" alt="A handcrafted cup of coffee with latte art" loading="lazy"></div><div class="card-b"><div class="num">01 — COFFEE</div><h3>Artisan Coffee</h3><p>Coffee poured with care — your daily cup, or the start of a longer, slower sit-down.</p></div></article>
 <article class="card reveal d1"><div class="ph"><img src="cake.jpg" alt="An elegant custom celebration cake with flowers and gold detail" loading="lazy"></div><div class="card-b"><div class="num">02 — CUSTOM CAKES</div><h3>Cakes, Made to Order</h3><p>Custom cakes for birthdays, anniversaries and every occasion in between — designed around your celebration.</p></div></article>
-<article class="card reveal d2"><div class="ph ph-breads"><img src="pastries.jpg" alt="Fresh artisan bread loaves at the cafe bakery counter" loading="lazy"></div><div class="card-b"><div class="num">03 — BREADS</div><h3>Fresh Breads</h3><p>Artisan loaves and fresh breads from the cafe's own bakery selection, baked for the day.</p></div></article>
+<article class="card reveal d2"><div class="ph ph-breads"><img src="breads.jpg" alt="Fresh artisan bread loaves at the cafe bakery counter" loading="lazy"></div><div class="card-b"><div class="num">03 — BREADS</div><h3>Fresh Breads</h3><p>Artisan loaves and fresh breads from the cafe's own bakery selection, baked for the day.</p></div></article>
 <article class="card reveal d3"><div class="ph ph-pastries"><img src="pastries.jpg" alt="Croissants and pastries in the cafe display" loading="lazy"></div><div class="card-b"><div class="num">04 — PASTRIES</div><h3>Pastries &amp; Bakes</h3><p>Croissants and pastries to pair with your coffee — or to carry home for later.</p></div></article>
 </div></div></section>
 
