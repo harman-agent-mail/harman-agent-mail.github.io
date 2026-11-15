@@ -48,8 +48,9 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:#0a0a0c;border-bott
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
 .hero-note{margin-top:28px;font-size:13.5px;color:var(--muted);letter-spacing:.05em}
 .hero-note b{color:var(--gold-2);font-weight:600}
-.scroll-cue{position:absolute;right:26px;bottom:30px;z-index:2;color:var(--gold);font-size:11px;letter-spacing:.34em;text-transform:uppercase;writing-mode:vertical-rl;display:none}
-@media(min-width:860px){.scroll-cue{display:block}}
+.scroll-cue{position:absolute;left:max(22px,calc(50% - 580px));bottom:30px;z-index:2;color:var(--gold);font-size:11px;letter-spacing:.34em;text-transform:uppercase;display:none;align-items:center;gap:12px}
+.scroll-cue::after{content:"";width:44px;height:1px;background:var(--gold);opacity:.55}
+@media(min-width:860px){.scroll-cue{display:flex}}
 /* ---------- sections ---------- */
 section{padding:84px 0}
 h2{font-family:Cinzel,serif;font-weight:700;font-size:clamp(29px,5.4vw,46px);line-height:1.14;letter-spacing:.01em;color:var(--cream);margin:16px 0 14px}
@@ -80,7 +81,7 @@ h2 .gold{color:var(--gold-2)}
 .ticks li{display:flex;gap:13px;font-size:15.5px;color:var(--body)}
 .ticks .t{flex:none;color:var(--gold);font-weight:700;margin-top:1px}
 /* asymmetric pair */
-.pair{display:grid;gap:22px;margin-top:10px}
+.pair{display:grid;gap:22px;margin-top:10px;align-items:start}
 @media(min-width:880px){.pair{grid-template-columns:1fr 1fr;gap:28px}.pair .down{margin-top:56px}}
 .feat{background:var(--panel);border:1px solid var(--line);border-radius:24px;overflow:hidden;transition:transform .35s ease,border-color .35s ease}
 .feat:hover{transform:translateY(-6px);border-color:rgba(198,161,91,.55)}
@@ -115,6 +116,9 @@ footer{text-align:center;color:#8f897d;font-size:13px;padding:36px 22px 10px}
 .js .rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1)}
 .js .rv.in{opacity:1;transform:none}
 .js .rv.d1{transition-delay:.12s}.js .rv.d2{transition-delay:.24s}.js .rv.d3{transition-delay:.36s}
+/* hero entrance: near-instant (desktop-QC fix) */
+.hero .rv{transition-duration:.35s}
+.hero .rv.d1{transition-delay:.03s}.hero .rv.d2{transition-delay:.06s}.hero .rv.d3{transition-delay:.09s}
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
   .js .rv{opacity:1;transform:none;transition:none}
@@ -175,7 +179,7 @@ footer{text-align:center;color:#8f897d;font-size:13px;padding:36px 22px 10px}
 <h2>Breads &amp; pastries, <span class="gold">baked for the day</span></h2></div>
 <div class="pair">
 <article class="feat rv">
-<div class="ph wide"><img src="breads.jpg" alt="Fresh artisan bread loaves at the cafe bakery counter" loading="lazy"></div>
+<div class="ph tall"><img src="breads.jpg" alt="Fresh artisan bread loaves at the cafe bakery counter" loading="lazy"></div>
 <div class="b"><div class="num">03 — BREADS</div><h3>Fresh Breads</h3><p>Artisan loaves and fresh breads from the cafe's own bakery selection, baked for the day.</p></div>
 </article>
 <article class="feat down rv d1">
